@@ -1,0 +1,20 @@
+﻿@page "/parent"
+@using UniversalComponent
+
+<PageTitle>Home</PageTitle>
+<Alert Show="showAlert" OnOk="@(() => showAlert = false)">
+    <ChildContent>
+        <h1>Alert</h1>
+        <p>Today is @DateTime.Now.DayOfWeek.</p>
+    </ChildContent>
+</Alert>
+@if (!showAlert)
+{
+    <button @onclick="@(() => showAlert = true)">
+        Show Alert
+
+    </button>
+}
+@code {
+    private bool showAlert = true;
+}
