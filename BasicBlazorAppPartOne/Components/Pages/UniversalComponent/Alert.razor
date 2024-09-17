@@ -1,30 +1,24 @@
-<!-- Directive  heare-->
-
-
-<!-- Html Markup -->
+﻿@namespace UniversalComponent
 
 @if (Show)
 {
-    <div>
         <div>
             <div>
-                @ChildContent
-            </div>
+                <div>
+                    @ChildContent
+                </div>
             <div>
-                <button @onclick="OnOk">
-                    OK
+        <button @onclick="OnOk">
+        OK
 
-                </button>
-            </div>
+        </button>
         </div>
-    </div>
+        </div>
+        </div>
 }
-
-
-<!-- Code block hear -->
 
 @code {
     [Parameter] public bool Show { get; set; }
     [Parameter] public EventCallback OnOk { get; set; }
-    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 }

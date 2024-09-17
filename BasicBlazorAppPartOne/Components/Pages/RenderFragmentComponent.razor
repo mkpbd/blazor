@@ -1,5 +1,6 @@
 ﻿@page "/parent"
 @using UniversalComponent
+@* @rendermode InteractiveAuto *@
 
 <PageTitle>Home</PageTitle>
 <Alert Show="showAlert" OnOk="@(() => showAlert = false)">
@@ -8,13 +9,21 @@
         <p>Today is @DateTime.Now.DayOfWeek.</p>
     </ChildContent>
 </Alert>
+
 @if (!showAlert)
 {
-    <button @onclick="@(() => showAlert = true)">
+    <button @onclick="ShowAllerFunc">
         Show Alert
 
     </button>
 }
+
 @code {
-    private bool showAlert = true;
+    public bool showAlert = false;
+
+    public void ShowAllerFunc()
+    {
+        showAlert = true;
+
+    }
 }

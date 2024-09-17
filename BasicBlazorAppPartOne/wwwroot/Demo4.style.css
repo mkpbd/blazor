@@ -1,0 +1,15 @@
+.dialog-container[b-j4grw2wm7a] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2000;
+    }
+    .dialog[b-j4grw2wm7a] {
+    background-color: white;
+    margin: auto;
+    width: 15rem;
+    padding: .5rem
+    }
